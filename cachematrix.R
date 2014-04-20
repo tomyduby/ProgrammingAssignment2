@@ -7,10 +7,13 @@ makeCacheMatrix <- function(x = matrix()) {
     ## Initialize the free variable m of this environment.
     m <- NULL
 
+    ## This function initializes the x and m free variables in this environment
     set <- function(y) {
         x <<- y
         m <<- NULL
     }
+    
+    ## This function returns the value of x free variable in this envoronment
     get <- function() x
     
     ## This function sets the calculated inverse into free variable m
